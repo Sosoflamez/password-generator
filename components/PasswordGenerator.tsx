@@ -231,6 +231,7 @@ export default function PasswordGenerator() {
         <p ref={footerRef} style={{ textAlign: "center", color: "rgba(255,255,255,0.2)", fontSize: "12px", marginTop: "24px", fontFamily: "'Space Mono', monospace", opacity: 0 }}>
           Généré localement • Aucune donnée envoyée
         </p>
+        
       </div>
     </div>
   );

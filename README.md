@@ -1,8 +1,8 @@
-# 🔐 PassForge — Générateur de mots de passe
+# 🔐 PassGankpo — Générateur de mots de passe
 
 Un générateur de mots de passe sécurisé construit avec **Next.js 14**, **TypeScript** et **Tailwind CSS**.
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 - **Génération cryptographique** via `crypto.getRandomValues` (pas `Math.random` !)
 - **Indicateur de robustesse** avec calcul d'entropie en bits
@@ -13,7 +13,7 @@ Un générateur de mots de passe sécurisé construit avec **Next.js 14**, **Typ
 - **Copie en un clic** dans le presse-papiers
 - Interface sombre et design moderne
 
-## 🚀 Démarrage rapide
+## Démarrage rapide
 
 ### Prérequis
 - Node.js 18+ installé sur votre machine
@@ -43,33 +43,6 @@ npm run build
 # Démarrer en production
 npm start
 ```
-
-## 📁 Structure du projet
-
-```
-password-generator/
-├── app/
-│   ├── globals.css       # Styles globaux + variables CSS
-│   ├── layout.tsx        # Layout racine (métadonnées, fonts)
-│   └── page.tsx          # Page principale
-├── components/
-│   └── PasswordGenerator.tsx  # Composant principal (toute la logique UI)
-├── lib/
-│   └── password.ts       # Logique de génération et d'évaluation
-├── tailwind.config.ts
-├── tsconfig.json
-└── package.json
-```
-
-## 🧠 Concepts Next.js utilisés
-
-| Concept | Où | Description |
-|---|---|---|
-| **App Router** | `app/` | Nouveau système de routing de Next.js 14 |
-| **Server Component** | `app/page.tsx` | Composant serveur par défaut |
-| **Client Component** | `"use client"` dans `PasswordGenerator.tsx` | Nécessaire pour les hooks React |
-| **Layout** | `app/layout.tsx` | Enveloppe commune à toutes les pages |
-| **Metadata API** | `layout.tsx` | SEO et titre de page |
 
 ## 🔒 Sécurité
 
