@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PassGankpo — Générateur de mots de passe",
+  title: "PassGankpo",
   description: "Générez des mots de passe sécurisés en un clic",
 };
 
