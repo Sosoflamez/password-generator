@@ -6,8 +6,8 @@ type Props = {
   noOptionSelected: boolean;
   onGenerate: () => void;
   onCopy: () => void;
-  passwordDisplayRef: React.RefObject<HTMLDivElement>;
-  passwordTextRef: React.RefObject<HTMLSpanElement>;
+  passwordDisplayRef: React.RefObject<HTMLDivElement | null>;
+  passwordTextRef: React.RefObject<HTMLSpanElement | null>;
   onBtnEnter: (el: HTMLElement) => void;
   onBtnLeave: (el: HTMLElement) => void;
 };
