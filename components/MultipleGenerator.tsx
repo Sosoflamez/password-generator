@@ -2,7 +2,7 @@ type Props = {
     countStr: string;
     count: number;
     noOptionSelected: boolean;
-    multipleRef: React.RefObject<HTMLDivElement>;
+    multipleRef: React.RefObject<HTMLDivElement | null>;
     onCountChange: (val: string) => void;
     onCountBlur: () => void;
     onGenerate: () => void;

@@ -1,7 +1,7 @@
 type Props = {
     entropy: number;
     strength: { label: string; color: string; width: string };
-    strengthBarRef: React.RefObject<HTMLDivElement>;
+    strengthBarRef: React.RefObject<HTMLDivElement | null>;
 };
 
 export default function StrengthBar({ entropy, strength, strengthBarRef }: Props) {
