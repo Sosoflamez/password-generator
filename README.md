@@ -1,52 +1,30 @@
-# 🔐 PassGankpo — Générateur de mots de passe
+# PassGankpo — Générateur de mots de passe
 
-Un générateur de mots de passe sécurisé construit avec **Next.js 14**, **TypeScript** et **Tailwind CSS**.
+Construit avec Next.js 14, TypeScript et Tailwind CSS.
 
-## Fonctionnalités
+## Ce qu'il fait
 
-- **Génération cryptographique** via `crypto.getRandomValues` (pas `Math.random` !)
-- **Indicateur de robustesse** avec calcul d'entropie en bits
-- **Options personnalisables** : longueur, majuscules, minuscules, chiffres, symboles
-- **Exclure les caractères ambigus** (I, l, 1, O, 0)
-- **Génération multiple** : générer et copier N mots de passe d'un coup
-- **Historique** des 10 derniers mots de passe générés
-- **Copie en un clic** dans le presse-papiers
-- Interface sombre et design moderne
+- Génération via `crypto.getRandomValues` — pas `Math.random`, qui n'est pas aléatoire au sens cryptographique
+- Calcul d'entropie en bits pour estimer la robustesse réelle du mot de passe
+- Options configurables : longueur, majuscules, minuscules, chiffres, symboles
+- Option pour exclure les caractères ambigus (I, l, 1, O, 0) — utile quand le mot de passe sera recopié à la main
+- Génération et copie de N mots de passe d'un coup
+- Historique des 10 derniers générés
+- Copie en un clic
+- Interface sombre
 
-## Démarrage rapide
+## Démarrage
 
-### Prérequis
-- Node.js 18+ installé sur votre machine
-- npm (inclus avec Node.js)
+Node.js 18+ requis.
 
-### Installation
-
-```bash
-# 1. Aller dans le dossier du projet
 cd password-generator
-
-# 2. Installer les dépendances
 npm install
-
-# 3. Lancer en mode développement
 npm run dev
-```
 
-Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+Ouvrir http://localhost:3000
 
-### Production
+En production : https://soso-password.vercel.app
 
-```bash
-# Construire l'application
-npm run build
+## Sécurité
 
-# Démarrer en production
-npm start
-```
-
-## 🔒 Sécurité
-
-Les mots de passe sont générés avec `crypto.getRandomValues()` (API Web Crypto), 
-qui utilise une source d'entropie cryptographiquement sûre, contrairement à `Math.random()`.
-
-Tout se passe **localement dans votre navigateur** — aucune donnée n'est envoyée vers un serveur.
+`crypto.getRandomValues()` tire son entropie du système d'exploitation, pas d'un algorithme mathématique déterministe. `Math.random()` est rapide et pratique — mais prévisible. Pour des mots de passe, ça compte.
